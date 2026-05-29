@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="app-shell" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventory.controller.InventoryController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="16" styleClass="top-bar">
+            <padding>
+                <Insets bottom="16" left="24" right="24" top="16"/>
+            </padding>
+            <VBox HBox.hgrow="ALWAYS">
+                <Label styleClass="title" text="Inventory Management"/>
+                <Label fx:id="userLabel" styleClass="subtitle" text="Logged in"/>
+            </VBox>
+            <Button onAction="#logout" styleClass="secondary-button" text="Logout"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="14" styleClass="side-panel">
+            <padding>
+                <Insets bottom="22" left="22" right="22" top="22"/>
+            </padding>
+            <Label styleClass="section-title" text="Item Details"/>
+            <TextField fx:id="nameField" promptText="Item name"/>
+            <TextField fx:id="categoryField" promptText="Category"/>
+            <TextField fx:id="quantityField" promptText="Quantity"/>
+            <TextField fx:id="priceField" promptText="Price"/>
+            <Button maxWidth="Infinity" onAction="#addItem" text="Add Item"/>
+            <Button maxWidth="Infinity" onAction="#updateItem" text="Update Selected"/>
+            <Button maxWidth="Infinity" onAction="#deleteItem" styleClass="danger-button" text="Delete Selected"/>
+            <Button maxWidth="Infinity" onAction="#clearForm" styleClass="secondary-button" text="Clear"/>
+            <Label fx:id="messageLabel" styleClass="message"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="12" styleClass="content-panel">
+            <padding>
+                <Insets bottom="22" left="22" right="22" top="22"/>
+            </padding>
+            <HBox alignment="CENTER_LEFT" spacing="12">
+                <Label styleClass="section-title" text="Stock Records" HBox.hgrow="ALWAYS"/>
+                <Button onAction="#refreshItems" styleClass="secondary-button" text="Refresh"/>
+            </HBox>
+            <TableView fx:id="itemTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="70" text="ID"/>
+                    <TableColumn fx:id="nameColumn" prefWidth="230" text="Name"/>
+                    <TableColumn fx:id="categoryColumn" prefWidth="180" text="Category"/>
+                    <TableColumn fx:id="quantityColumn" prefWidth="120" text="Quantity"/>
+                    <TableColumn fx:id="priceColumn" prefWidth="120" text="Price"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

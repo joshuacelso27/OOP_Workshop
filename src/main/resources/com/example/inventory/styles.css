@@ -1,0 +1,97 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: #f4f6f8;
+}
+
+.auth-card {
+    -fx-background-color: #f4f6f8;
+}
+
+.app-shell {
+    -fx-background-color: #f4f6f8;
+}
+
+.top-bar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dde3ea;
+    -fx-border-width: 0 0 1 0;
+}
+
+.side-panel {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dde3ea;
+    -fx-border-width: 0 1 0 0;
+    -fx-pref-width: 280;
+}
+
+.content-panel {
+    -fx-background-color: #f4f6f8;
+}
+
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2937;
+}
+
+.subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #64748b;
+}
+
+.section-title {
+    -fx-font-size: 17px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2937;
+}
+
+.message {
+    -fx-font-size: 12px;
+    -fx-text-fill: #b42318;
+    -fx-wrap-text: true;
+}
+
+.text-field, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 10;
+}
+
+.button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 700;
+    -fx-background-radius: 6;
+    -fx-padding: 10 14;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.secondary-button {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #1f2937;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #cbd5e1;
+}
+
+.danger-button {
+    -fx-background-color: #dc2626;
+}
+
+.danger-button:hover {
+    -fx-background-color: #b91c1c;
+}
+
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dde3ea;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
